@@ -1,0 +1,48 @@
+/*so here we have given N queries. and then we need to perform queries on the stack. 
+first, push the element into the stack and then delete the element present at the top of the stack 
+and then print the maximum element in the stack.
+*/
+//In Java
+
+package com.java2novice.algos;
+ 
+import java.util.Scanner;
+import java.util.Stack;
+ 
+public class StackMaxElement {
+ 
+    public static void main(String arg[]) {    //main method
+                                                     //Define the both stacks
+        Stack<Integer> stack = new Stack<>();       //1st stack to keep track of all the elements
+        Stack<Integer> maxStack = new Stack<>();    //2nd stack to keep track of max elemement
+ 
+        Scanner snr = new Scanner(System.in);     //used to read user input
+        int n = snr.nextInt();                //The nextInt() method of Java Scanner class is used to scan the next token of the input as an int.
+        for(int i=0;i<n;i++) {
+            int input = snr.nextInt();
+            switch (input){
+                case 1:                        //push
+                    int x = snr.nextInt();        
+                    stack.push(x);                 //push the input in main stack
+                    if(maxStack.isEmpty() || x >= maxStack.peek()) {  // if the max stack is empty or the top ele 
+                        maxStack.push(x);                     //in max stack is < than current ele then push it in max stack.
+                    }
+                    break;
+ 
+                case 2:                         //pop
+                    int popVl = stack.pop();         //here pop the top element of main stack
+                    if(popVl == maxStack.peek()) // if the poped ele is = top ele of max stack then perform pop on max stack also.
+                        {maxStack.pop();
+                    }
+                    break;
+ 
+                case 3:                          //max ele
+                    System.out.println(maxStack.peek());// return the top ele of max stack as it is maximum ele of stack
+                    break;
+ 
+                default: break;
+            }
+        }
+        snr.close();
+    }
+}
