@@ -18,7 +18,7 @@ void getMinMax(int arr[] , int N)
 int main(){
    int arr[] = {2, 1, 6, 9, 4, 10, 15, 21};
    int N = 8;
-   getMinMax(arr, N);
+    getMinMax(arr, N);
    return 0;
 }
 Q2 To reverse an array.
