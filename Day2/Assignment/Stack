@@ -1,4 +1,4 @@
-/*so here we have given N queries. and then we need to perform queries on the stack. 
+ /*so here we have given N queries. and then we need to perform queries on the stack. 
 first, push the element into the stack and then delete the element present at the top of the stack 
 and then print the maximum element in the stack.
 */
