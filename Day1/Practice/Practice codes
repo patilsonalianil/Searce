@@ -21,7 +21,7 @@ int main(){
     getMinMax(arr, N);
    return 0;
 }
-Q2 To reverse an array.
+ Q2 To reverse an array.
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
