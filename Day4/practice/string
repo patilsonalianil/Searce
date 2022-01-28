@@ -1,0 +1,48 @@
+//Q String reverse
+void reverse(string str)
+{
+    for(int i=str.length()-1;i>=0;i--)
+    { cout<<str[i];
+    }
+}
+int main()
+{ string c="sonali";
+   reverse(c);
+    return 0; }
+Or
+int main(){
+    string str = "SONALI";
+    //Use of reverse iterators
+    string rev = string(str.rbegin(),str.rend());
+    cout<<rev<<endl;
+    return 0;
+}
+
+//Palindrome aba=aba,(STRING)
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    char string1[20];
+    int i, length;
+    int flag = 0;
+    cout << "Enter a string: "; 
+    cin >> string1;
+    length = strlen(string1);
+    for(i=0;i < length ;i++)
+    {
+        if(string1[i] != string1[length-i-1]){
+            flag = 1;
+            break;
+   }
+}   
+    if (flag) {
+        cout << string1 << " is not a palindrome" << endl; 
+    }    
+    else {
+        cout << string1 << " is a palindrome" << endl; 
+    }
+    return 0;
+}
+
