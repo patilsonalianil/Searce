@@ -29,7 +29,7 @@ public class StackMaxElement {
                     }
                     break;
  
-                case 2:                         //pop
+                 case 2:                         //pop
                     int popVl = stack.pop();         //here pop the top element of main stack
                     if(popVl == maxStack.peek()) // if the poped ele is = top ele of max stack then perform pop on max stack also.
                         {maxStack.pop();
